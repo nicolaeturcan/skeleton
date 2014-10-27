@@ -23,6 +23,9 @@
        <ul class="dropdown-menu">
          <li><a href="<?=base_url()?>index.php/skeleton_main/organizational_unit"><?php echo lang('organizationalunit_menu');?></a></li>
          <li><a href="<?=base_url()?>index.php/skeleton_main/location"><?php echo lang('location_menu');?></a></li>
+         <li><a href="<?=base_url()?>index.php/hola_main/hola"><?php echo 'hola';?></a></li>
+         <li><a href="<?=base_url()?>index.php/skeleton_main/hola_function"><?php echo 'hola versió funció';?></a></li>
+
        </ul>                                                                                                                                                                                                                                                                                                                                      
       </li>
       <?php endif; ?>
