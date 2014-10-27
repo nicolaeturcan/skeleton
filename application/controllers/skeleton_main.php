@@ -294,6 +294,111 @@ class skeleton_main extends CI_Controller {
 	    $this->_load_body_footer();	         
         
     } 
+
+
+
+
+
+public function hola()
+    {
+		if (!$this->skeleton_auth->logged_in())
+		{
+			//redirect them to the login page
+			redirect($this->skeleton_auth->login_page, 'refresh');
+		}
+		
+		//CHECK IF USER IS READONLY --> unset add, edit & delete actions
+		$readonly_group = $this->config->item('readonly_group');
+		if ($this->skeleton_auth->in_group($readonly_group)) {
+			$this->grocery_crud->unset_add();
+			$this->grocery_crud->unset_edit();
+			$this->grocery_crud->unset_delete();
+		}
+		
+		//$this->current_table="hola";
+        //$this->grocery_crud->set_table($this->current_table);
+        
+        //ESTABLISH SUBJECT
+        //$this->grocery_crud->set_subject(lang('hola_subject'));                
+        
+        //Mandatory fields
+        //$this->grocery_crud->required_fields('name','shortName','markedForDeletion');
+        
+        //Express fields
+        //$this->grocery_crud->express_fields('name','shortName','parenthola');
+        
+        //CALLBACKS        
+        //$this->grocery_crud->callback_add_field('entryDate',array($this,'add_field_callback_entryDate'));
+        //$this->grocery_crud->callback_edit_field('entryDate',array($this,'edit_field_callback_entryDate'));
+        
+        //Camps last update no editable i automàtic        
+        //$this->grocery_crud->callback_edit_field('last_update',array($this,'edit_field_callback_lastupdate'));
+        
+        //Camps last update no editable i automàtic        
+        //$this->grocery_crud->callback_edit_field('last_update',array($this,'edit_field_callback_lastupdate'));
+        
+        //COMMON_COLUMNS               
+        //$this->set_common_columns_name();
+               
+        //SPECIFIC COLUMNS
+        //$this->grocery_crud->display_as('parenthola',lang('parenthola'));
+        
+        //Establish fields/columns order and wich camps to show
+        //$this->grocery_crud->columns($this->session->userdata('location_current_fields_to_show'));
+        
+        //Relacions entre taules
+        //$this->grocery_crud->set_relation('parenthola','hola','{name}',array('markedForDeletion' => 'n'));
+        
+         //UPDATE AUTOMATIC FIELDS
+		//$this->grocery_crud->callback_before_insert(array($this,'before_insert_object_callback'));
+		//$this->grocery_crud->callback_before_update(array($this,'before_update_object_callback'));
+        
+        //$this->grocery_crud->unset_add_fields('last_update');
+        
+   		
+   		//USER ID: show only active users and by default select current userid. IMPORTANT: Field is not editable, always forced to current userid by before_insert_object_callback
+        //$this->grocery_crud->set_relation('creationUserId','users','{username}',array('active' => '1'));
+        //$this->grocery_crud->set_default_value($this->current_table,'creationUserId',$this->session->userdata('user_id'));
+
+        //LAST UPDATE USER ID: show only active users and by default select current userid. IMPORTANT: Field is not editable, always forced to current userid by before_update_object_callback
+        //$this->grocery_crud->set_relation('lastupdateUserId','users','{username}',array('active' => '1'));
+        //$this->grocery_crud->set_default_value($this->current_table,'lastupdateUserId',$this->session->userdata('user_id'));
+        
+        //$this->grocery_crud->unset_dropdowndetails("creationUserId","lastupdateUserId","parenthola");
+        
+        $this->set_theme($this->grocery_crud);
+        $this->set_dialogforms($this->grocery_crud);
+        
+        //Default values:
+        //$this->grocery_crud->set_default_value($this->current_table,'parenthola',1);
+        //markedForDeletion
+        //$this->grocery_crud->set_default_value($this->current_table,'markedForDeletion','n');
+                   
+        //$output = $this->grocery_crud->render();
+                        
+        $this->_load_html_header($this->_get_html_header_data());//,$output); 
+	    $this->_load_body_header();
+		
+		$default_values=$this->_get_default_values();
+		//$default_values["table_name"]=$this->current_table;
+		$this->load->view('defaultvalues_view.php',$default_values); 
+			
+        $this->load->view('hola_view.php');//,$output);     
+
+	    $this->_load_body_footer();	         
+        
+    } 
+
+
+
+
+
+
+
+
+
+
+
 	
 	public function organizational_unit()
     {
