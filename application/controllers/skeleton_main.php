@@ -182,17 +182,26 @@ class skeleton_main extends CI_Controller {
 		$bootstrap_min=base_url("assets/css/bootstrap.min.css");
 		//$bootstrap_responsive=base_url("assets/css/bootstrap-responsive.min.css");
 		$font_awesome=base_url("assets/css/font-awesome.min.css");
+		$jquery_ui = base_url("assets/css/jquery-ui-1.10.3.custom.min.css"); 		//afegit
+        $datepicker = base_url("assets/css/datepicker.css");						//afegit
+   		$bootstrap_timepicker = base_url("assets/css/bootstrap-timepicker.css");	//afegit
+        $daterangepicker = base_url("assets/css/daterangepicker.css");				//afegit
+        $colorpicker = base_url("assets/css/colorpicker.css");						//afegit
         $ace_fonts = base_url("assets/css/ace-fonts.css");
         $ace_min = base_url("assets/css/ace.min.css");
+        $ace_extra_min = base_url("assets/css/jquery-ui-1.10.3.full.min.css");		//afegit
         $ace_rtl = base_url("assets/css/ace-rtl.min.css");
         $ace_skins = base_url("assets/css/ace-skins.min.css");
 
 
 		//array_push($skeleton_css_files, $bootstrap_min, $bootstrap_responsive,$font_awesome);
 		//$header_data['skeleton_css_files']=$skeleton_css_files;			
-		array_push($skeleton_css_files, $bootstrap_min, $font_awesome, $ace_fonts, 
-			$ace_min, $ace_rtl, $ace_skins);
+		
+		array_push($skeleton_css_files, $bootstrap_min, $font_awesome, $ace_fonts,
+		 $ace_min,$ace_extra_min, $ace_rtl, $ace_skins,$datepicker,$bootstrap_timepicker,$daterangepicker,$jquery_ui,
+		 $colorpicker);
 
+		
 		$header_data['skeleton_css_files']=$skeleton_css_files;			
 
 
@@ -208,26 +217,29 @@ class skeleton_main extends CI_Controller {
 		
 		$lazyload_js=base_url("assets/grocery_crud/js/common/lazyload-min.js");
 		//$bootstrap_js=base_url("assets/js/bootstrap.min.js");
-		$ace_extra_js = base_url("/assets/js/ace-extra.min.js");
-		$bootstrap_min_js = base_url("/assets/js/bootstrap.min.js");
-		$typeahead = base_url("/assets/js/typeahead-bs2.min.js");
-		$jquery_ui = base_url("/assets/js/jquery-ui-1.10.3.custom.min.js");
-		$jquery_touch = base_url("/assets/js/jquery.ui.touch-punch.min.js");
-		$jquery_slimscroll = base_url("/assets/js/jquery.slimscroll.min.js");
-		$jquery_easy = base_url("/assets/js/jquery.easy-pie-chart.min.js");
-		$jquery_sparkline = base_url("/assets/js/jquery.sparkline.min.js");
-		$jquery_flot1 = base_url("/assets/js/flot/jquery.flot.min.js");
-		$jquery_flot2 = base_url("/assets/js/flot/jquery.flot.pie.min.js");
-		$jquery_flot3 = base_url("/assets/js/flot/jquery.flot.resize.min.js");
-		$ace_elements = base_url("/assets/js/ace-elements.min.js");
-		$ace_min = base_url("/assets/js/ace.min.js");
+		$ace_extra_js = base_url("assets/js/ace-extra.min.js");
+		$bootstrap_min_js = base_url("assets/js/bootstrap.min.js");
+		$typeahead = base_url("assets/js/typeahead-bs2.min.js");
+		$jquery_full_min = base_url("assets/js/jquery-ui-1.10.3.full.min.js");
+		//$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");
+		$jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
+		/*$jquery_slimscroll = base_url("assets/js/jquery.slimscroll.min.js");
+		$jquery_easy = base_url("assets/js/jquery.easy-pie-chart.min.js");
+		$jquery_sparkline = base_url("assets/js/jquery.sparkline.min.js");
+		$jquery_flot1 = base_url("assets/js/flot/jquery.flot.min.js");
+		$jquery_flot2 = base_url("assets/js/flot/jquery.flot.pie.min.js");
+		$jquery_flot3 = base_url("assets/js/flot/jquery.flot.resize.min.js");*/
+		$ace_elements = base_url("assets/js/ace-elements.min.js");
+		$ace_min = base_url("assets/js/ace.min.js");
 
 
 		//array_push($skeleton_js_files, $lodash_js ,$jquery_js , $bootstrap_js, $lazyload_js);
 		
-		array_push($skeleton_js_files, $ace_extra_js, $bootstrap_min_js, $typeahead, $jquery_ui, $jquery_touch, $jquery_slimscroll,
-			$jquery_easy, $jquery_sparkline, $jquery_flot1, $jquery_flot2, $jquery_flot3, $ace_elements, $ace_min, $lodash_js, $jquery_js, $lazyload_js);
+		//array_push($skeleton_js_files, $ace_extra_js, $bootstrap_min_js, $typeahead, $jquery_ui, $jquery_touch, $jquery_slimscroll,
+		//	$jquery_easy, $jquery_sparkline, $jquery_flot1, $jquery_flot2, $jquery_flot3, $ace_elements, $ace_min, $lodash_js, $jquery_js, $lazyload_js);
 		
+		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_full_min,$jquery_touch,
+			$ace_elements,$ace_min,$lodash_js, $lazyload_js);
 
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		
