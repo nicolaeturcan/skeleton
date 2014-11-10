@@ -263,7 +263,7 @@ if ( !class_exists('skeleton_main') ) {
 		}
 		
 		$this->current_table="location";
-		$this->grocery_crud->set_table($this->current_table);
+		$this->grocery_crud->set_table($this->current_table); //aquesta i render...provar-ho en location2...
 
         //ESTABLISH SUBJECT
 		$this->grocery_crud->set_subject(lang('location_subject'));                
@@ -321,7 +321,7 @@ if ( !class_exists('skeleton_main') ) {
         //markedForDeletion
 		$this->grocery_crud->set_default_value($this->current_table,'markedForDeletion','n');
 
-		$output = $this->grocery_crud->render();
+		$output = $this->grocery_crud->render(); //pinta la taula
 
 		$this->_load_html_header($this->_get_html_header_data(),$output); 
 		$this->_load_body_header();

@@ -48,8 +48,8 @@
       
 <style type="text/css">
      body {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        /*padding-top: 60px;-->
+        padding-bottom: 60px;*/
 		font-family: Arial;
                 font-size: 14px;
                
