@@ -409,21 +409,44 @@ public function Formulari(){
 		$this->_load_body_footer();	
 
 		$this->load->view('Formulari.php');//,$output);
+
+
 }
 
+public function prova_crud(){
+				
 
+if (!$this->skeleton_auth->logged_in())
+		{
+			//redirect them to the login page
+			redirect($this->skeleton_auth->login_page, 'refresh');
+		}
+		
+		//CHECK IF USER IS READONLY --> unset add, edit & delete actions
+		$readonly_group = $this->config->item('readonly_group');
+		if ($this->skeleton_auth->in_group($readonly_group)) {
+			$this->grocery_crud->unset_add();
+			$this->grocery_crud->unset_edit();
+			$this->grocery_crud->unset_delete();
+		}
+		
 
+		$this->current_table="location";
+		$this->grocery_crud->set_table($this->current_table); //aquesta i render...provar-ho en location2...
 
+	$this->grocery_crud->set_subject('Prova');
 
+		$output = $this->grocery_crud->render(); //pinta la taula
 
+		$this->_load_html_header($this->_get_html_header_data(),$output); 
+		$this->_load_body_header();
+		
+	
 
+		$this->load->view('prova_crud.php',$output);     
 
-
-
-
-
-
-
+		$this->_load_body_footer();	         
+}
 
 
 

@@ -1,5 +1,3 @@
-
-
 <div id="skeleton_body_footer">
 
 <style type="text/css">	  
@@ -19,6 +17,7 @@
     }	
 </style>
 <div style="clear:both;"></div>
+
 <div class="navbar navbar-fixed-bottom">
 	<div class="navbar-inner footer">
 		<div class="container">    
@@ -32,9 +31,9 @@
 		</div>	
 	</div>
 </div>
+
 	
 </div>
-
 
   <!-- basic scripts -->
 
