@@ -192,6 +192,7 @@ if ( !class_exists('skeleton_main') ) {
         $ace_extra_min = base_url("assets/css/jquery-ui-1.10.3.full.min.css");		//afegit
         $ace_rtl = base_url("assets/css/ace-rtl.min.css");
         $ace_skins = base_url("assets/css/ace-skins.min.css");
+        $select2_css = base_url("assets/css/select2.css");
 
 
 		//array_push($skeleton_css_files, $bootstrap_min, $bootstrap_responsive,$font_awesome);
@@ -199,7 +200,7 @@ if ( !class_exists('skeleton_main') ) {
 
         array_push($skeleton_css_files, $bootstrap_min, $font_awesome, $ace_fonts,
         	$ace_min,$ace_extra_min, $ace_rtl, $ace_skins,$datepicker,$bootstrap_timepicker,$daterangepicker,$jquery_ui,
-        	$colorpicker);
+        	$colorpicker,$select2_css);
 
 
         $header_data['skeleton_css_files']=$skeleton_css_files;			
@@ -413,6 +414,16 @@ public function Formulari(){
 
 }
 
+public function _get_formulari_js(){
+    	$formulari_js_files=array();
+    	$jquery_maskedinput = base_url("assets/js/jquery.maskedinput.min.js");
+    	$select2 = base_url("assets/js/select2.js");
+    	array_push($formulari,$jquery_maskedinput,$select2);
+    	$formulari_data['formulari_data'] = $formulari_js_files;
+        return $formulari_data;
+    }
+
+
 public function prova_crud(){
 				
 
@@ -434,7 +445,7 @@ if (!$this->skeleton_auth->logged_in())
 		$this->current_table="location";
 		$this->grocery_crud->set_table($this->current_table); //aquesta i render...provar-ho en location2...
 
-	$this->grocery_crud->set_subject('Prova');
+		$this->grocery_crud->set_subject('Prova');
 
 		$output = $this->grocery_crud->render(); //pinta la taula
 

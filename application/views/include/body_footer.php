@@ -16,7 +16,7 @@
          	color: #efefef;
     }	
 </style>
-<div style="clear:both;"></div>
+<!--<div style="clear:both;"></div>-->
 
 <div class="navbar navbar-fixed-bottom">
 	<div class="navbar-inner footer">
