@@ -5,6 +5,7 @@
 		try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
 		</script>
 
+		<!-- mulletes de pa-->
 		<ul class="breadcrumb">
 			<li>
 				<i class="icon-home home-icon"></i>
@@ -44,125 +45,154 @@
 
 				<form class="form-horizontal" role="form">
 
+					<div>
+						<div class="col-sm-8">
+							<div class="form-group">
+								<!--  Llastname Field -->
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Cognom </label>
+								<div class="col-sm-9">
+									<input type="text" id="Cognom" placeholder="Cognom" class="col-xs-10 col-sm-5" />
+								</div>
+							</div>
 
-					<div class="form-group">
-						<!--  Llastname Field -->
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Cognom </label>
-						<div class="col-sm-9">
-							<input type="text" id="Cognom" placeholder="Cognom" class="col-xs-10 col-sm-5" />
+							<div class="form-group">
+								<!-- Name Field -->
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NOM </label>
+
+								<div class="col-sm-9">
+									<input type="text" id="form-field-1" placeholder="Nom" class="col-xs-10 col-sm-5" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-mask-4"> NIF </label>
+
+								<div class="col-sm-9">
+									<input class="col-xs-10 col-sm-5 input-mask-dni" type="text" id="form-field-mask-4" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> DATA NAIXEMENT </label>
+								<div class="col-sm-4">
+									<div class="input-group ">
+										<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy"/>
+										<span class="input-group-addon">
+											<i class="icon-calendar bigger-110"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> MUNICIPI i PROVÍNCIA DE NAIXEMENT: </label>
+
+								<div class="col-sm-9">
+
+									<select class="width-50 select2" id="form-field-select-1" data-placeholder="Tria un municipi i provicia de naixement...">
+										<option value="">&nbsp;</option>									
+										<option value="" >Barcelona</option>
+										<option value="" >Tarragona</option>
+										<option value="" >Valencia</option>
+									</select>
+									<span></span>
+								</div>										
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> ADREÇA </label>
+								<div class="col-sm-9">
+									<input type="text" id="Adreça" placeholder="Adreça" class="col-xs-10 col-sm-5" />
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<div>
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> MUNICIPI: </label>
+									<div class="col-sm-9">
+										<select class="width-50 select2" id="form-field-select-2" data-placeholder="Tria un municipi...">
+											<option value="">&nbsp;</option>
+											<option value="">Barcelona</option>
+											<option value="">Roquetes</option>
+											<option value="">Tortosa</option>										
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div>
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Codi Postal:</label>
+									<div class="col-sm-9">
+										<select class="width-50 select2" id="form-field-select-3" data-placeholder="Tria el codi postal...">
+											<option value="">&nbsp;</option>
+											<option value="">40000</option>
+											<option value="">43520</option>
+											<option value="">43500</option>
+											<option value="">52470</option>								
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> TELÈFON </label>
+								<div class="col-sm-4">
+									<div class="input-group">
+										<input class="form-control input-mask-telefono" type="text" id="form-field-mask-3" />
+										<span class="input-group-addon">
+											<i class="icon-key"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> CORREU ELECTRÒNIC </label>
+
+								<div class="col-sm-9">
+									<input type="text" id="Correu electronic" placeholder="Correu electrònic" class="col-xs-10 col-sm-5" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> SI TENIU UNA ALTRA ADREÇA, INDIQUEU-LA: </label>
+
+								<div class="col-sm-9">
+									<input type="text" id="altra_adresa" placeholder="La meua altra adreça" class="col-xs-10 col-sm-5" />
+								</div>
+							</div>
+
+
+							<h3 class="header smaller lighter blue"></h3>
+
+
 						</div>
-					</div>
 
-					<div class="form-group">
-						<!-- Name Field -->
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NOM </label>
-
-						<div class="col-sm-9">
-							<input type="text" id="form-field-1" placeholder="Nom" class="col-xs-10 col-sm-5" />
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-mask-4"> NIF </label>
-
-						<div class="col-sm-9">
-							<input class="col-xs-10 col-sm-5 input-mask-dni" type="text" id="form-field-mask-4" />
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> DATA NAIXEMENT </label>
 						<div class="col-sm-4">
-							<div class="input-group ">
-								<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy"/>
-								<span class="input-group-addon">
-									<i class="icon-calendar bigger-110"></i>
-								</span>
+							<div class="widget-box">
+								<div class="widget-header widget-header-flat">
+									<h4>Fotografia: </h4>
+								</div>
+								<div class="widget-body">
+									<div class="widget-main">
+										<input multiple="" type="file" id="id-input-file-3" />
+										<label>
+											<input type="checkbox" name="file-format" id="id-file-format" class="ace" />
+											<span class="lbl"> Permetre pujar només imatges</span>
+										</label>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
 
-
-					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> MUNICIPI i PROVÍNCIA DE NAIXEMENT: </label>
-
-						<div class="col-sm-9">
-
-							<select class="width-50 select2" id="form-field-select-1" data-placeholder="Tria un municipi i provicia de naixement...">
-								<option value="">&nbsp;</option>									
-								<option value="" >Barcelona</option>
-								<option value="" >Tarragona</option>
-								<option value="" >Valencia</option>
-							</select>
-							<span></span>
-						</div>										
-					</div>
-
-					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> ADREÇA </label>
-						<div class="col-sm-9">
-							<input type="text" id="Adreça" placeholder="Adreça" class="col-xs-10 col-sm-5" />
-						</div>
-					</div>
-
-
-					<div class="form-group">
-						<div>
-							<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> MUNICIPI: </label>
-							<div class="col-sm-9">
-								<select class="width-50 select2" id="form-field-select-2" data-placeholder="Tria un municipi...">
-									<option value="">&nbsp;</option>
-									<option value="">Barcelona</option>
-									<option value="">Roquetes</option>
-									<option value="">Tortosa</option>										
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<div>
-							<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Codi Postal:</label>
-							<div class="col-sm-9">
-								<select class="width-50 select2" id="form-field-select-3" data-placeholder="Tria el codi postal...">
-									<option value="">&nbsp;</option>
-									<option value="">40000</option>
-									<option value="">43520</option>
-									<option value="">43500</option>
-									<option value="">52470</option>								
-								</select>
-							</div>
-						</div>
-					</div>
+						</div><!-- /span -->
 
 
 
-
-					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> TELÈFON </label>
-						<div class="col-sm-4">
-							<div class="input-group">
-								<input class="form-control input-mask-telefono" type="text" id="form-field-mask-3" />
-								<span class="input-group-addon">
-									<i class="icon-key"></i>
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> CORREU ELECTRÒNIC </label>
-
-						<div class="col-sm-9">
-							<input type="text" id="Correu electronic" placeholder="Correu electrònic" class="col-xs-10 col-sm-5" />
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> SI TENIU UNA ALTRA ADREÇA, INDIQUEU-LA: </label>
-
-						<div class="col-sm-9">
-							<input type="text" id="altra_adresa" placeholder="La meua altra adreça" class="col-xs-10 col-sm-5" />
-						</div>
 					</div>
 
 
@@ -170,11 +200,7 @@
 
 
 
-
-
-
-
-					<h3 class="header smaller lighter blue"></h3>
+					
 					<div class="form-group">
 						<div class="row">
 							<div class="col-xs-12 col-sm-6">
@@ -259,7 +285,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> DATA D'ALTA AL CENTRE: </label>
-							<div class="col-sm-9">
+							<div class="col-sm-4">
 								<div class="input-group">
 									<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" placeholder="dd-mm-yyyy"/>
 									<span class="input-group-addon">
@@ -285,6 +311,18 @@
 						</div>
 
 						<div class="space-24"></div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -354,33 +392,6 @@ if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobil
 <script src="assets/js/typeahead-bs2.min.js"></script>
 
 <!-- page specific plugin scripts -->
-
-		<!--[if lte IE 8]>
-		  <script src="assets/js/excanvas.min.js"></script>
-		  <![endif]-->
-
-		  <script src="<?=base_url()?>assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/jquery.ui.touch-punch.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/chosen.jquery.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/fuelux/fuelux.spinner.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/date-time/bootstrap-datepicker.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/date-time/bootstrap-timepicker.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/date-time/moment.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/date-time/daterangepicker.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/bootstrap-colorpicker.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/jquery.knob.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/jquery.autosize.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/jquery.maskedinput.min.js"></script>
-		  <script src="<?=base_url()?>assets/js/bootstrap-tag.min.js"></script>
-		  <script src="<?php echo base_url('assets/js/select2.js');?>"></script>
-
-		  <!-- ace scripts -->
-
-		  <script src="assets/js/ace-elements.min.js"></script>
-		  <script src="assets/js/ace.min.js"></script>
-
-		  <!-- inline scripts related to this page -->
 
 		  <script type="text/javascript">
 		  

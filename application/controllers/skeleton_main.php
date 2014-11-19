@@ -95,7 +95,7 @@ if ( !class_exists('skeleton_main') ) {
 			$data['skeleton_css_files'] = $skeleton_css_files ;
 			$data['skeleton_js_files'] = $skeleton_js_files ;
 			$data['menu'] = $menu;
-			$this->load->view($this->html_header_view,array_merge((array) $grocery_crud_data,$data));
+			$this->load->view($this->html_header_view,array_merge((array) $grocery_crud_data,$data)); //el segon matxaca les coses iguals del primer.
 		}
 
 		protected function _load_body_header() {
@@ -195,6 +195,8 @@ if ( !class_exists('skeleton_main') ) {
         $select2_css = base_url("assets/css/select2.css");
 
 
+
+
 		//array_push($skeleton_css_files, $bootstrap_min, $bootstrap_responsive,$font_awesome);
 		//$header_data['skeleton_css_files']=$skeleton_css_files;			
 
@@ -222,8 +224,23 @@ if ( !class_exists('skeleton_main') ) {
         $bootstrap_min_js = base_url("assets/js/bootstrap.min.js");
         $typeahead = base_url("assets/js/typeahead-bs2.min.js");
         $jquery_full_min = base_url("assets/js/jquery-ui-1.10.3.full.min.js");
-		//$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");
+		$jquery_ui = base_url("assets/js/jquery-ui-1.10.3.custom.min.js");          				//descomentat
         $jquery_touch = base_url("assets/js/jquery.ui.touch-punch.min.js");
+        $jquery_chosen = base_url("assets/js/chosen.jquery.min.js");								//afegit
+        $fluex_spinner = base_url("assets/js/fuelux/fuelux.spinner.min.js");						//afegit
+		$bootstrap_datepicker = base_url("assets/js/date-time/bootstrap-datepicker.min.js");		//afegit
+		$bootstrap_timepicker = base_url("assets/js/date-time/bootstrap-timepicker.min.js");		//afegit
+		$bootstrap_moment = base_url("assets/js/date-time/moment.min.js");							//afegit
+		$bootstrap_daterangepicker = base_url("assets/js/date-time/daterangepicker.min.js");		//afegit
+		$bootstrap_colorpicker = base_url("assets/js/bootstrap-colorpicker.min.js");				//afegit
+		$jquery_knob = base_url("assets/js/jquery.knob.min.js");									//afegit
+
+		$jquery_autosize = base_url("assets/js/jquery.autosize.min.js");							//afegit
+		$query_inputlimiter = base_url("assets/js/jquery.inputlimiter.1.3.1.min.js");				//afegit
+		$jquery_maskedinput = base_url("assets/js/jquery.maskedinput.min.js");						//afegit
+		$bootstrap_tag = base_url("assets/js/bootstrap-tag.min.js");								//afegit
+		$select2 = base_url("assets/js/select2.js");												//afegit
+
 		/*$jquery_slimscroll = base_url("assets/js/jquery.slimscroll.min.js");
 		$jquery_easy = base_url("assets/js/jquery.easy-pie-chart.min.js");
 		$jquery_sparkline = base_url("assets/js/jquery.sparkline.min.js");
@@ -234,13 +251,17 @@ if ( !class_exists('skeleton_main') ) {
 		$ace_min = base_url("assets/js/ace.min.js");
 
 
+
 		//array_push($skeleton_js_files, $lodash_js ,$jquery_js , $bootstrap_js, $lazyload_js);
 		
 		//array_push($skeleton_js_files, $ace_extra_js, $bootstrap_min_js, $typeahead, $jquery_ui, $jquery_touch, $jquery_slimscroll,
 		//	$jquery_easy, $jquery_sparkline, $jquery_flot1, $jquery_flot2, $jquery_flot3, $ace_elements, $ace_min, $lodash_js, $jquery_js, $lazyload_js);
 		
-		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_full_min,$jquery_touch,
-			$ace_elements,$ace_min,$lodash_js, $lazyload_js);
+
+		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_full_min,$jquery_ui,
+			$jquery_touch,$jquery_chosen,$fluex_spinner,$bootstrap_datepicker,$bootstrap_timepicker,$bootstrap_moment,
+			$bootstrap_daterangepicker,$bootstrap_colorpicker,$jquery_knob,$jquery_autosize,$query_inputlimiter,$jquery_maskedinput,
+			$bootstrap_tag,$select2,$ace_elements,$ace_min,$lodash_js, $lazyload_js);
 
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		
@@ -402,14 +423,14 @@ public function Formulari(){
 		$this->_load_body_header();
 		
 		//$this->_load_body();
-		
+		$this->load->view('Formulari.php');//,$output);
 
 		/*******************
 		/*      FOOTER     *
 		*******************/
 		$this->_load_body_footer();	
 
-		$this->load->view('Formulari.php');//,$output);
+		
 
 
 }
@@ -456,7 +477,7 @@ if (!$this->skeleton_auth->logged_in())
 
 		$this->load->view('prova_crud.php',$output);     
 
-		$this->_load_body_footer();	         
+		//$this->_load_body_footer();	         
 }
 
 
