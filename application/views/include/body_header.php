@@ -375,6 +375,13 @@
             </a>
           </li>
 
+          <li>
+            <a href="<?=base_url('/index.php/skeleton_main/datatable')?>">
+              <i class="icon-double-angle-right"></i>
+              DataTable
+            </a>
+          </li>
+
         </ul>
       </li>
 

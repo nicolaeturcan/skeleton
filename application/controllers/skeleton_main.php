@@ -192,8 +192,8 @@ if ( !class_exists('skeleton_main') ) {
         $ace_extra_min = base_url("assets/css/jquery-ui-1.10.3.full.min.css");		//afegit
         $ace_rtl = base_url("assets/css/ace-rtl.min.css");
         $ace_skins = base_url("assets/css/ace-skins.min.css");
-        $select2_css = base_url("assets/css/select2.css");
-
+        $select2_css = base_url("assets/css/select2.css");							//afegit
+        $jquery_dt="http://cdn.datatables.net/1.10.4/css/jquery.dataTables.css"; 	//afegit
 
 
 
@@ -202,7 +202,7 @@ if ( !class_exists('skeleton_main') ) {
 
         array_push($skeleton_css_files, $bootstrap_min, $font_awesome, $ace_fonts,
         	$ace_min,$ace_extra_min, $ace_rtl, $ace_skins,$datepicker,$bootstrap_timepicker,$daterangepicker,$jquery_ui,
-        	$colorpicker,$select2_css);
+        	$colorpicker,$select2_css,$jquery_dt);
 
 
         $header_data['skeleton_css_files']=$skeleton_css_files;			
@@ -249,6 +249,8 @@ if ( !class_exists('skeleton_main') ) {
 		$jquery_flot3 = base_url("assets/js/flot/jquery.flot.resize.min.js");*/
 		$ace_elements = base_url("assets/js/ace-elements.min.js");
 		$ace_min = base_url("assets/js/ace.min.js");
+		$datatable1="http://code.jquery.com/jquery-1.11.1.min.js";
+		$datatable2="http://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js";
 
 
 
@@ -261,7 +263,7 @@ if ( !class_exists('skeleton_main') ) {
 		array_push($skeleton_js_files,$jquery_js,$ace_extra_js,$bootstrap_min_js,$typeahead,$jquery_full_min,$jquery_ui,
 			$jquery_touch,$jquery_chosen,$fluex_spinner,$bootstrap_datepicker,$bootstrap_timepicker,$bootstrap_moment,
 			$bootstrap_daterangepicker,$bootstrap_colorpicker,$jquery_knob,$jquery_autosize,$query_inputlimiter,$jquery_maskedinput,
-			$bootstrap_tag,$select2,$ace_elements,$ace_min,$lodash_js, $lazyload_js);
+			$bootstrap_tag,$select2,$ace_elements,$ace_min,$datatable1,$datatable2,$lodash_js, $lazyload_js);
 
 		$header_data['skeleton_js_files']=$skeleton_js_files;	
 		
@@ -481,6 +483,36 @@ if (!$this->skeleton_auth->logged_in())
 }
 
 
+public function datatable(){
+	if (!$this->skeleton_auth->logged_in())
+		{
+			//redirect them to the login page
+			redirect($this->skeleton_auth->login_page, 'refresh');
+		}
+		//redirect($this->skeleton_auth->login_page, 'refresh');
+		
+		//LOAD VIEW
+		
+		/*******************
+		/*      HEADER     *
+		/******************/
+		$this->_load_html_header($this->_get_html_header_data());
+		
+		
+		/*******************
+		/*      BODY     *
+		/******************/
+		$this->_load_body_header();
+		
+		//$this->_load_body();
+		$this->load->view('datatable.php');//,$output);
+
+		/*******************
+		/*      FOOTER     *
+		*******************/
+		$this->_load_body_footer();	
+
+}
 
 
 
